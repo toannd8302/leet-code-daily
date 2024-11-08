@@ -8,12 +8,6 @@
  * */
 package Day2_2024_11_06_palindrome;
 
-/*
- * Request: Given an integer x, return true if x is a palindrome, and false otherwise.
- * Constraints: -2*31 <= x <= 2*31 - 1
- * Palindrome Number
- * */
-
 public class Solution {
 	// Bài 1: Đếm số các chữ số của 1 dãy số n cho trước (n>0)
 	// Cách 1: Dùng 1 vòng lặp đơn thuần
@@ -35,8 +29,40 @@ public class Solution {
 	}
 
 	// B2
+//	public boolean isPalindrome(int x) {
+//		int lastDigit;
+//		int numReversed = 0;
+//		if (x < 0) {
+//			return false;
+//		} else if (x < 10 ) {
+//			return true;
+//		} else if (x % 10 == 0) {
+//			return false;
+//		}else {
+//			while (x > numReversed) {
+//				lastDigit = x % 10;
+//				numReversed = numReversed * 10 + lastDigit;
+//				x /= 10;
+//				if (numReversed == x || numReversed == x / 10) {
+//					return true;
+//				}
+//			}
+//			return false;
+//		}
+//
+//	}
+	// Optimization
 	public boolean isPalindrome(int x) {
-		return false;
-
+		if (x < 0 || (x % 10 == 0 && x != 0)) {
+			return false;
+		}
+		int lastDigit;
+		int numReversed = 0;
+		while (x > numReversed) {
+			lastDigit = x % 10;
+			numReversed = numReversed * 10 + lastDigit;
+			x /= 10;
+		}
+		return (x == numReversed ||  numReversed == x / 10);
 	}
 }

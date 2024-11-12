@@ -6,7 +6,7 @@
 	You can return the answer in any order.
 	
  * */
-package Day4_2024_11_11_;
+package Day4_2024_11_11_longest_common_prefix;
 import java.util.Arrays;
 
 public class Solution {

@@ -1,4 +1,4 @@
-package Day4_2024_11_11_;
+package Day4_2024_11_11_longest_common_prefix;
 
 public class Main_RomanNumber {
 

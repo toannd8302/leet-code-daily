@@ -8,9 +8,7 @@
  * */
 package Day6_2024_11_13_find_numbers_with_even_number_of_digits;
 
-import java.util.Iterator;
-
-public class Solution {
+ public class Solution {
 
 	public int findNumbers(int[] nums) {
 		int count = 0;
